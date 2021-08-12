@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "beWMMDIS/M8NftfRGrnMX7E/kHJRrJ5Ib9EdvtwSzw7yXMQtu85pukGTCF1YzAjobflqFpqe5IXENji/+A2E4g==",
+  "dgSpecHash": "Y2YWrP0ZnpwZvnzYWD85J/uCBs0uHnxjcFmNIGqlEpVd1nKhrrfBpxBQHHBKd5G55WWiIM6ZyGC5T70yFPKPxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
+  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.entityframeworkcore\\2.0.0-preview1-final\\microsoft.entityframeworkcore.2.0.0-preview1-final.nupkg.sha512",

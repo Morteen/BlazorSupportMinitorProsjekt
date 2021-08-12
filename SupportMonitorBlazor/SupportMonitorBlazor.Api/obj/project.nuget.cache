@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I5RB0iaP1X3wtZ9HkeB49HGhcdg9sNb5venXPluMTG77i/IRZ4b4zdI7lg9WwkJO2clHBHS1PNvSvpPmAL9g8A==",
+  "dgSpecHash": "uJKJS4sQWBrJb5cPnwY41UkiLJL9PzbcSvTGScuJihThNN2xzAxAv2d4+g/zvpXNweohpbhKLA0HD7YZk9m7lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
+  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\morten.olsen\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.aspnetcore.blazor.httpclient\\3.2.0-preview3.20168.3\\microsoft.aspnetcore.blazor.httpclient.3.2.0-preview3.20168.3.nupkg.sha512",

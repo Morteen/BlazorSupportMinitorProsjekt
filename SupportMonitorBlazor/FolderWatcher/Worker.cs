@@ -20,8 +20,7 @@ namespace FolderWatcher
        private string ApiUrl;
         private int TmsIdfromSettings;
    
-       //List<string> FileAdressArray;
-
+       
        
       
         public Worker(ILogger<Worker> logger,IConfiguration config)

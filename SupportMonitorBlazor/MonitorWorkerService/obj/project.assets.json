@@ -1023,11 +1023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
+      "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
       "projectName": "MonitorWorkerService",
-      "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
+      "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
       "packagesPath": "C:\\Users\\morten.olsen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\MonitorWorkerService\\obj\\",
+      "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\MonitorWorkerService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

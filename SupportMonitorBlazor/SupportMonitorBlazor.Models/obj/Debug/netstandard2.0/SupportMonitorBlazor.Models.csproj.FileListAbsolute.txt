@@ -7,3 +7,12 @@ C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\SupportMonitorBlazor\
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.csproj.CoreCompileInputs.cache
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.dll
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.pdb
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\bin\Debug\netstandard2.0\SupportMonitorBlazor.Models.deps.json
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\bin\Debug\netstandard2.0\SupportMonitorBlazor.Models.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\bin\Debug\netstandard2.0\SupportMonitorBlazor.Models.pdb
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.csprojAssemblyReference.cache
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.AssemblyInfoInputs.cache
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.AssemblyInfo.cs
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.csproj.CoreCompileInputs.cache
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Models\obj\Debug\netstandard2.0\SupportMonitorBlazor.Models.pdb

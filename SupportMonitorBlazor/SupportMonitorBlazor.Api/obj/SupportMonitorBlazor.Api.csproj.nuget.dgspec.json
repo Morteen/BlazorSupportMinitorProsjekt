@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj": {}
+    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj": {
+    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
+        "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
         "projectName": "SupportMonitorBlazor.Api",
-        "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
+        "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
         "packagesPath": "C:\\Users\\morten.olsen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\obj\\",
+        "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -33,8 +33,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj": {
-                "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj"
+              "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj": {
+                "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj": {
+    "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
+        "projectUniqueName": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
         "projectName": "SupportMonitorBlazor.Models",
-        "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
+        "projectPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\SupportMonitorBlazor.Models.csproj",
         "packagesPath": "C:\\Users\\morten.olsen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\obj\\",
+        "outputPath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

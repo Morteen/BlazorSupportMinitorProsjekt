@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HQy/xPCP0GItzlOzmXNUklhT94MU9CEIhWpXHy3wEHBl3DNCqKxyFWC/Ef3R/ajhFnIaTnG0/gv+kJYzTMnD4A==",
+  "dgSpecHash": "PFQ2KmKJQ8Srs7iuzNgjj44gXGaykd+NIA/aasfBpPlMbfPYCHAgHokganQD+zZ04ZzWU1/FjAM+Lunt4BRkdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\FolderWatcher\\FolderWatcher.csproj",
+  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\FolderWatcher\\FolderWatcher.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.17\\microsoft.extensions.configuration.3.1.17.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.17\\microsoft.extensions.configuration.abstractions.3.1.17.nupkg.sha512",

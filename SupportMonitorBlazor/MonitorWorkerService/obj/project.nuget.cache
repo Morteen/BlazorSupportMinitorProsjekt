@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OhcWxgUoGq/ofZyQM1vkZdOG6zG+LOIO4ccrg5k+T9qEgZRwUP568U3s3iNF28IYU/J+b1PUFR9k3+BbStJqXw==",
+  "dgSpecHash": "gdtNGtjcWuRhUoYGIujBC2nrqFtyESO2FNIBGdEh/DK3SGf77Y8fhaNKJCkUOCfRxfC7dkOwPJp3MvLWKGxUbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
+  "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\MonitorWorkerService\\MonitorWorkerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.16\\microsoft.extensions.configuration.3.1.16.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.16\\microsoft.extensions.configuration.abstractions.3.1.16.nupkg.sha512",
