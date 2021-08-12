@@ -168,7 +168,7 @@ namespace FolderWatcher
             if (response.IsSuccessStatusCode)
             {
 
-                Console.WriteLine("Denne tjenesten kjører ikke:" + space.Name);
+                Console.WriteLine("denne mappen er oppdatert:" + space.Name);
             }
             else { Console.WriteLine("Det er noe galt: " + response.ReasonPhrase); }
 
