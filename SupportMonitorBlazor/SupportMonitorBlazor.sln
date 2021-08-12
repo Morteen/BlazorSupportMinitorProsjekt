@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupportMonitorBlazor", "SupportMonitorBlazor\SupportMonitorBlazor.csproj", "{7BAE88B7-002C-4730-A5F2-11D899CD8B7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupportMonitorBlazor.Models", "SupportMonitorBlazor.Models\SupportMonitorBlazor.Models.csproj", "{471FF40D-EB42-424D-8659-BB9F5C28358A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupportMonitorBlazor.Api", "SupportMonitorBlazor.Api\SupportMonitorBlazor.Api.csproj", "{36FD9F22-0D30-4E59-922C-01698A774B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderMonitor", "FolderMonitor\FolderMonitor.csproj", "{17DA9D32-46BC-4F87-8E85-0903F233E29B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorWorkerService", "MonitorWorkerService\MonitorWorkerService.csproj", "{40A04A23-CEB8-4403-9D9C-97987D806F20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderWatcher", "FolderWatcher\FolderWatcher.csproj", "{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BAE88B7-002C-4730-A5F2-11D899CD8B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BAE88B7-002C-4730-A5F2-11D899CD8B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BAE88B7-002C-4730-A5F2-11D899CD8B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BAE88B7-002C-4730-A5F2-11D899CD8B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471FF40D-EB42-424D-8659-BB9F5C28358A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471FF40D-EB42-424D-8659-BB9F5C28358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471FF40D-EB42-424D-8659-BB9F5C28358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471FF40D-EB42-424D-8659-BB9F5C28358A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FD9F22-0D30-4E59-922C-01698A774B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FD9F22-0D30-4E59-922C-01698A774B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FD9F22-0D30-4E59-922C-01698A774B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FD9F22-0D30-4E59-922C-01698A774B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DA9D32-46BC-4F87-8E85-0903F233E29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DA9D32-46BC-4F87-8E85-0903F233E29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DA9D32-46BC-4F87-8E85-0903F233E29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DA9D32-46BC-4F87-8E85-0903F233E29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A04A23-CEB8-4403-9D9C-97987D806F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A04A23-CEB8-4403-9D9C-97987D806F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A04A23-CEB8-4403-9D9C-97987D806F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A04A23-CEB8-4403-9D9C-97987D806F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00D423E9-25BD-4409-8372-C19BD20AAA12}
+	EndGlobalSection
+EndGlobal
