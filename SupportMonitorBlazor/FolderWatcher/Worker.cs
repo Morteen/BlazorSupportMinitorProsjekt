@@ -172,7 +172,7 @@ namespace FolderWatcher
             }
             else { Console.WriteLine("Det er noe galt: " + response.ReasonPhrase); }
 
-
+            client.Dispose();
 
             }
         private async Task CheckFolderSize(string[] FileAdressArrey)

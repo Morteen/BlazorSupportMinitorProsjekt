@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PLoC7Okip2NjnYZOEFjnXOFiwVdKM9ZKtI90hxAxOvYgewTOwmOPGsZ1w8W4z2E8xF+Z+dDkvO2yoQ5OPUBUbQ==",
+  "dgSpecHash": "5Fga/dFtmLnwWssAHro+5ZdjZxvm1uqyHolGVNqjRj4oLZ1bYz0nCDniTBzZq20frVGBV62kDvIIQd1h9A5q+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\ServiceWatcher\\ServiceWatcher.csproj",
   "expectedPackageFiles": [
@@ -29,11 +29,12 @@
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.options\\3.1.17\\microsoft.extensions.options.3.1.17.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.17\\microsoft.extensions.options.configurationextensions.3.1.17.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.17\\microsoft.extensions.primitives.3.1.17.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0-preview.7.21377.19\\system.diagnostics.eventlog.6.0.0-preview.7.21377.19.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0-preview.7.21377.19\\system.serviceprocess.servicecontroller.6.0.0-preview.7.21377.19.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []
