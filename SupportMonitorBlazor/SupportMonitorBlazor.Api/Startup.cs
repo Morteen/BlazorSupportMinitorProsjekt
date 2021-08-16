@@ -34,6 +34,7 @@ namespace SupportMonitorBlazor.Api
             services.AddScoped<ISystemValuesRepository, SystemValuesRepository>();
             services.AddScoped<IDiskSpaceRepository, DiskSpaceRepository>();
             services.AddScoped<ITmsPropertiesRepository, TmsPropertiesRepository>();
+            services.AddScoped<ITMS_ServicesRepository, TMS_ServicesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

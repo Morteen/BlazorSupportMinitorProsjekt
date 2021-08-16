@@ -18,6 +18,7 @@ namespace SupportMonitorBlazor.Api.Models
         public DbSet<SystemValues> SystemValues { get; set; }
         public DbSet<DiskSpace> DiskSpace { get; set; }
         public DbSet<TmsProperties> TmsProperties { get; set; }
+        public DbSet<TMS_Services> TMS_Services { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -228,6 +229,18 @@ namespace SupportMonitorBlazor.Api.Models
 
 
              });*/
+             modelBuilder.Entity<TMS_Services>().HasData(new TMS_Services
+             {
+                Id = 1,
+                Name="Test",
+                DisplayName="Teast",
+             //RunningSince= "2021 - 06 - 18 07:54:26.2000000"
+
+
+                
+
+
+            });
 
 
 
