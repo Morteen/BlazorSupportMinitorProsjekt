@@ -229,18 +229,19 @@ namespace SupportMonitorBlazor.Api.Models
 
 
              });*/
-             modelBuilder.Entity<TMS_Services>().HasData(new TMS_Services
-             {
+            modelBuilder.Entity<TMS_Services>().HasData(new TMS_Services
+            {
                 Id = 1,
-                Name="Test",
-                DisplayName="Teast",
-             //RunningSince= "2021 - 06 - 18 07:54:26.2000000"
+                TMS_Id = 2,
+                Name = "Test",
+                DisplayName = "Test",
+                RunningSince = DateTime.Now
 
 
-                
 
 
-            });
+
+            }); ;
 
 
 

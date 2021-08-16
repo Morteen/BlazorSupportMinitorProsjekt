@@ -24,6 +24,12 @@ namespace SupportMonitorBlazor.Api.Models
         {
             return await dBContext.BlazorTMS.ToListAsync();
         }
+        public async Task<BlazorTMS> GetTms(int TmsId)
+        {
+            return await dBContext.BlazorTMS.FirstOrDefaultAsync(t => t.TmsId == TmsId);
+
+        }
+
 
         public async Task<BlazorTMS> AddTms(BlazorTMS tms)
         {
@@ -45,12 +51,7 @@ namespace SupportMonitorBlazor.Api.Models
             }
         }
 
-        public async Task<BlazorTMS> GetTms(int TmsId)
-        {
-           return await dBContext.BlazorTMS.FirstOrDefaultAsync(t => t.TmsId == TmsId);
-          
-        }
-
+      
        
 
         public async Task<BlazorTMS> UpdateTms(BlazorTMS tms)

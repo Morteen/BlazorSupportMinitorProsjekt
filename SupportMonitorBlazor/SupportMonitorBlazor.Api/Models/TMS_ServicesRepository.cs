@@ -1,21 +1,43 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SupportMonitorBlazor.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace SupportMonitorBlazor.Api.Models
 {
     public class TMS_ServicesRepository : ITMS_ServicesRepository
     {
         private readonly appDBContext dBContext;
-
         public TMS_ServicesRepository(appDBContext dBContext)
         {
             this.dBContext = dBContext;
         }
 
+        public async Task<IEnumerable<TMS_Services>> GetServiceList()
+        {
+         
+            return await dBContext.TMS_Services.ToListAsync();
+        }
+        public async Task<TMS_Services> GetService(int TMS_Id,string Name)
+        {
+            return await dBContext.TMS_Services.FirstOrDefaultAsync(s => s.TMS_Id == TMS_Id && s.Name==Name);
+        }
 
-        public Task<TMS_ServicesRepository> AddService(TMS_ServicesRepository service)
+
+
+        public async Task<IEnumerable<TMS_Services>> GetServiceListForTms(int TMS_ID)
+        {
+            return await dBContext.TMS_Services.Where(t=>t.TMS_Id==TMS_ID).ToListAsync();
+        }
+
+
+
+
+        public Task<TMS_Services> AddService(TMS_Services service)
         {
             throw new NotImplementedException();
         }
@@ -25,20 +47,39 @@ namespace SupportMonitorBlazor.Api.Models
             throw new NotImplementedException();
         }
 
-        public Task<TMS_ServicesRepository> GetService(int TmsId)
+      
+
+
+        public Task<TMS_Services> UpdateTms(TMS_Services serevice)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TMS_ServicesRepository>> GetServiceList()
+       
+        public  async Task<TMS_Services> AddOrUpdateTms(TMS_Services service)
         {
-            //return await dBContext..ToListAsync(); throw new NotImplementedException();
-            throw new NotImplementedException();
-        }
+            var result = await dBContext.TMS_Services.Where(t => t.TMS_Id == service.TMS_Id && t.Name==service.Name).FirstOrDefaultAsync();
+            if (result!= null)
+            {
+                result.Name = service.Name;
+                result.DisplayName = service.DisplayName;
+                result.Status = service.Status;
+             
 
-        public Task<TMS_ServicesRepository> UpdateTms(TMS_ServicesRepository serevice)
-        {
-            throw new NotImplementedException();
+                await dBContext.SaveChangesAsync();
+                return result;
+            }
+            else
+            {
+
+                var resulte = await dBContext.TMS_Services.AddAsync(service);
+                await dBContext.SaveChangesAsync();
+                return resulte.Entity;
+            }
+           //return null;
+
+
+
         }
     }
 }

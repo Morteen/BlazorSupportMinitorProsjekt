@@ -86,7 +86,6 @@ C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorP
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
-C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.csprojAssemblyReference.cache
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.AssemblyInfoInputs.cache
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.AssemblyInfo.cs
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.csproj.CoreCompileInputs.cache
