@@ -58,13 +58,16 @@ namespace SupportMonitorBlazor.Api.Models
        
         public  async Task<TMS_Services> AddOrUpdateTms(TMS_Services service)
         {
-            var result = await dBContext.TMS_Services.Where(t => t.TMS_Id == service.TMS_Id && t.Name==service.Name).FirstOrDefaultAsync();
+            var result = await dBContext.TMS_Services.FirstOrDefaultAsync(f=>f.TMS_Id==service.TMS_Id && f.Name==service.Name);
+          
             if (result!= null)
             {
-                result.Name = service.Name;
+                //result.Name = service.Name;
                 result.DisplayName = service.DisplayName;
                 result.Status = service.Status;
-             
+                result.RunningSince = DateTime.Now;
+
+
 
                 await dBContext.SaveChangesAsync();
                 return result;

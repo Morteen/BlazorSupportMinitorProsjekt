@@ -93,7 +93,7 @@ namespace SupportMonitorBlazor.Api.Controllers
 
                 //CreatedAtAction tar 3 parameter: navn på metoden som man får ved NameOf + id + det nye objektet
                 // return Ok(CreatedAtAction(nameof(createdOrUpdatedTms_service.Name), new { id = createdOrUpdatedTms_service.Id }, createdOrUpdatedTms_service));
-                return Ok("vellykket");
+                return Ok(service.Id+" Var vellyket"+service.DisplayName);
 
 
 
