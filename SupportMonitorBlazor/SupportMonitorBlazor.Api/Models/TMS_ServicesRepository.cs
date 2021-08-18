@@ -65,11 +65,25 @@ namespace SupportMonitorBlazor.Api.Models
                 //result.Name = service.Name;
                 result.DisplayName = service.DisplayName;
                 result.Status = service.Status;
-                result.RunningSince = DateTime.Now;
+             
 
 
 
+             
+
+                //Leggger til en kritisk feil på TMS'et
+                if (service.Status != "Running")
+                {
+                    var Tms = await dBContext.BlazorTMS.FindAsync(service.TMS_Id);
+                    if (Tms!=null) {
+                        Tms.CriticalErrors = Tms.CriticalErrors + 1;
+                        await dBContext.SaveChangesAsync();
+                    }
+                    //Legger på et nytt tidsstempel hvis servicen er stoppet
+                    result.RunningSince = DateTime.Now;
+                }
                 await dBContext.SaveChangesAsync();
+
                 return result;
             }
             else
