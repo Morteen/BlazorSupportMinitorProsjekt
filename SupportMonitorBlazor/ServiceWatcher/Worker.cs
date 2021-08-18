@@ -46,7 +46,7 @@ namespace ServiceWatcher
                       
                         if (scTemp.ServiceName == name)
                     {
-                            var serviceToCheck = new TMS_Services { Id = index, TMS_Id = _TmsId, Status = DefaultServiceStatus, Name = scTemp.ServiceName, DisplayName = scTemp.DisplayName, RunningSince = DateTime.Now };
+                            var serviceToCheck = new TMS_Services { TMS_Id = _TmsId, Status = DefaultServiceStatus, Name = scTemp.ServiceName, DisplayName = scTemp.DisplayName, RunningSince = DateTime.Now };
                             if (scTemp.Status.ToString() != DefaultServiceStatus)
                             {
                                 
@@ -57,9 +57,9 @@ namespace ServiceWatcher
                             }
                             Console.WriteLine("Indexverdi:" + index + " Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id);
 
-
+                            index = index + 1;
                         }
-                        index = index + 1;
+                       
                     }
                   
                 }

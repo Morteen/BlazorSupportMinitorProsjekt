@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SupportMonitorBlazor.Api.Models;
 
 namespace SupportMonitorBlazor.Api.Migrations
 {
     [DbContext(typeof(appDBContext))]
-    partial class appDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210818122023_AutoKeyForTMS_services")]
+    partial class AutoKeyForTMS_services
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -82,7 +82,8 @@ namespace SupportMonitorBlazor.Api.Models
                     //Legger på et nytt tidsstempel hvis servicen er stoppet
                     result.RunningSince = DateTime.Now;
                 }
-                await dBContext.SaveChangesAsync();
+                dBContext.Entry(result).State = EntityState.Modified;
+                 await dBContext.SaveChangesAsync();
 
                 return result;
             }
