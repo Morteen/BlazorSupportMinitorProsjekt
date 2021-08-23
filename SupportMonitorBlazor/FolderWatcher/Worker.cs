@@ -63,15 +63,18 @@ namespace FolderWatcher
             }
             await CheckFolderSize(FileAdressArrey);
 
-
+         
             
-          
+
+
+
+
 
 
             //while (!stoppingToken.IsCancellationRequested)
             //{
 
-            FileSystemWatcher watcher = new FileSystemWatcher();
+          /*  FileSystemWatcher watcher = new FileSystemWatcher();
                 watcher.Path = @"C:\Users\morten.olsen\Desktop\MyWatcherTestFolder";
                 watcher.NotifyFilter = NotifyFilters.Attributes | NotifyFilters.CreationTime | NotifyFilters.FileName | NotifyFilters.Size;
                 watcher.Filter = "*.*";
@@ -82,10 +85,10 @@ namespace FolderWatcher
            
 
                 //Start monitoring
-                watcher.EnableRaisingEvents = true;
+                watcher.EnableRaisingEvents = true;*/
 
-            //  _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            //  await Task.Delay(1000, stoppingToken);
+              _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+             await Task.Delay(5000, stoppingToken);
            
         }
 
@@ -99,10 +102,7 @@ namespace FolderWatcher
             _logger.LogInformation(e.OldName + " er endret til  " + e.Name + " Foldersize test " );
 
 
-            var folderSize = Convert.ToInt32(CalculateFolderSize(@"C:\Users\morten.olsen\Desktop\MyWatcherTestFolder"));
-            var space = new DiskSpace {Id=1, TmsId = 2,Name="E",Type=e.Name,FreespacePercentMinimum=1,FrespaceMinimumBytes=11, Actualsize = folderSize,MaxSize=2 };
-          
-           await UpdateDiskSpace(space);
+         
           
 
 
