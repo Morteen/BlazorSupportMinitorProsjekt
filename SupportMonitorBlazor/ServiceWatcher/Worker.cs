@@ -22,7 +22,8 @@ namespace ServiceWatcher
         TMS_Services TMS_Services;
         private int _TmsId;
         private string DefaultServiceStatus="Running";
-        int index = 102;
+        string starttype;
+        int CheckingRate;
         public Worker(ILogger<Worker> logger, IConfiguration config)
         {
             _logger = logger;
@@ -33,8 +34,7 @@ namespace ServiceWatcher
         {
 
             var ServiceDisplayName = _config.GetSection("TmsInfo:ServiceDisplayName").Get<string[]>();
-           // var ServiceDisplayName = _config.GetSection("Test:ServiceDisplayName").Get<string[]>();
-            //var nameIndex = _config.GetSection("Test:Id").Get<int[]>();
+            CheckingRate = _config.GetValue<int>("TmsInfo:CheckingRate");
             _TmsId = _config.GetValue<int>("TmsInfo:TmsId");
             while (!stoppingToken.IsCancellationRequested)
             {
@@ -47,24 +47,27 @@ namespace ServiceWatcher
                         if (scTemp.ServiceName == name)
                     {
                             var serviceToCheck = new TMS_Services { TMS_Id = _TmsId, Status = DefaultServiceStatus, Name = scTemp.ServiceName, DisplayName = scTemp.DisplayName, RunningSince = DateTime.Now };
-                            if (scTemp.Status.ToString() != DefaultServiceStatus)
-                            {
+                          
                                 
                             
                                 serviceToCheck.Status = scTemp.Status.ToString();
-                                Console.WriteLine("Indexverdi:" + index + " Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id);
+                                starttype  = scTemp.StartType.ToString();
+                           
+                                Console.WriteLine(" Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id,serviceToCheck.StartType= starttype);
                                 await UpdateServiceStatus(serviceToCheck);
-                            }
-                            Console.WriteLine("Indexverdi:" + index + " Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id);
+                          
+                            Console.WriteLine( " Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + 
+                                "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id + "  Start type:"+ starttype/*+" TEST: "+test */);
 
-                            index = index + 1;
+
+                         
                         }
                        
                     }
                   
                 }
-                     //   _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(4000, stoppingToken);
+                  
+                await Task.Delay(CheckingRate, stoppingToken);
             }
         }
 

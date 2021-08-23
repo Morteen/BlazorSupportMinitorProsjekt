@@ -16,5 +16,6 @@ namespace SupportMonitorBlazor.Models
         public string DisplayName { get; set; }
         public string Status { get; set; }
         public DateTime RunningSince { get; set; }
+        public  string StartType { get; set; }
     }
 }

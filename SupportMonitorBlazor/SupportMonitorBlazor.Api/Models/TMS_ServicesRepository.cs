@@ -64,7 +64,20 @@ namespace SupportMonitorBlazor.Api.Models
             {
                 //result.Name = service.Name;
                 result.DisplayName = service.DisplayName;
-                result.Status = service.Status;
+                if (service.Status!=null && service.Status!= result.Status)
+                {
+                    result.Status = service.Status;
+                }
+              
+                if (service.Status != null || service.Status == "Stopped")
+                {
+                    result.RunningSince = DateTime.Now;
+                }
+                if(service.StartType != null || service.StartType != "Automatic")
+                {
+                    result.StartType = service.StartType;
+                }
+          
              
 
 
