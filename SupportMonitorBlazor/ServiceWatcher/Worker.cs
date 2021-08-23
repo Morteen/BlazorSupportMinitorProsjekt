@@ -57,7 +57,7 @@ namespace ServiceWatcher
                                 await UpdateServiceStatus(serviceToCheck);
                           
                             Console.WriteLine( " Id:" + serviceToCheck.Id + " Service Navn:" + serviceToCheck.Name + 
-                                "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id + "  Start type:"+ starttype/*+" TEST: "+test */);
+                                "  Status:" + serviceToCheck.Status + " Dispaly name:" + serviceToCheck.DisplayName + " TMS_Id:" + serviceToCheck.TMS_Id + "  Start type:"+ starttype);
 
 
                          

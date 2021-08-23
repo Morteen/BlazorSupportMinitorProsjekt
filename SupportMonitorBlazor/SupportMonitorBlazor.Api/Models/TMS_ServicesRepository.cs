@@ -89,7 +89,8 @@ namespace SupportMonitorBlazor.Api.Models
                 {
                     var Tms = await dBContext.BlazorTMS.FindAsync(service.TMS_Id);
                     if (Tms!=null) {
-                        Tms.CriticalErrors = Tms.CriticalErrors + 1;
+                        if (Tms.CriticalErrors == 0)
+                            Tms.CriticalErrors = 1;
                         await dBContext.SaveChangesAsync();
                     }
                     //Legger på et nytt tidsstempel hvis servicen er stoppet
