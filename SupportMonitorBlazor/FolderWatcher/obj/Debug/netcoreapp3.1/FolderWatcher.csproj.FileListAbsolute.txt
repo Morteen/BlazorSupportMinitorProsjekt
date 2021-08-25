@@ -93,3 +93,4 @@ C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorP
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.dll
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.pdb
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.genruntimeconfig.cache
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\FolderWatcher\obj\Debug\netcoreapp3.1\FolderWatcher.csprojAssemblyReference.cache

@@ -19,10 +19,12 @@ namespace FolderWatcher
         private readonly IConfiguration _config;
        private string ApiUrl;
         private int TmsIdfromSettings;
-   
-       
-       
-      
+        private int CheckingRate;
+
+
+
+
+
         public Worker(ILogger<Worker> logger,IConfiguration config)
         {
             _logger = logger;
@@ -44,24 +46,12 @@ namespace FolderWatcher
 
             TmsIdfromSettings = _config.GetValue<int>("TmsInfo:TmsId");
             var FileAdressArrey = _config.GetSection("TmsInfo:FileAdressArrey").Get<string[]>();
+            CheckingRate = _config.GetValue<int>("TmsInfo:CheckingRate");
             ApiUrl = _config.GetValue<string>("TmsInfo:ApiUrl");
-            Console.WriteLine("Dette er en Apiadressen:" + ApiUrl);
-            /*   foreach(string folderLocation in FileAdressArrey)
-               {
-                   Console.WriteLine("Dette er en adresse"+ folderLocation);
-               }*/
+            
+          
 
 
-            //string test = _config.GetValue<string>("MySettings");
-            //string FileAdressFromSettings = _config.GetValue<string>("TmsInfo:FileAdress");
-
-            foreach (string folderLocation in FileAdressArrey)
-            {
-                 string FolderLocationIncludingEscapeSigne = @"";
-                FolderLocationIncludingEscapeSigne += folderLocation;
-                Console.WriteLine("Dette er en adresse" + folderLocation + " Og den mappen er så stor:"+ CalculateFolderSize(FolderLocationIncludingEscapeSigne));
-            }
-            await CheckFolderSize(FileAdressArrey);
 
          
             
@@ -71,42 +61,26 @@ namespace FolderWatcher
 
 
 
-            //while (!stoppingToken.IsCancellationRequested)
-            //{
+            while (!stoppingToken.IsCancellationRequested) {
 
-          /*  FileSystemWatcher watcher = new FileSystemWatcher();
-                watcher.Path = @"C:\Users\morten.olsen\Desktop\MyWatcherTestFolder";
-                watcher.NotifyFilter = NotifyFilters.Attributes | NotifyFilters.CreationTime | NotifyFilters.FileName | NotifyFilters.Size;
-                watcher.Filter = "*.*";
-                watcher.Changed += new FileSystemEventHandler(onChange);
-                watcher.Created += new FileSystemEventHandler(onChange);
-                watcher.Deleted += new FileSystemEventHandler(onChange);
-                watcher.Renamed += new RenamedEventHandler(onRenamed);
+                foreach (string folderLocation in FileAdressArrey)
+                {
+                    string FolderLocationIncludingEscapeSigne = @"";
+                    FolderLocationIncludingEscapeSigne += folderLocation;
+                    Console.WriteLine("Dette er en adresse" + folderLocation + " Og den mappen er så stor:" + CalculateFolderSize(FolderLocationIncludingEscapeSigne));
+                }
+                await CheckFolderSize(FileAdressArrey);
+
+            
+                await Task.Delay(CheckingRate, stoppingToken);
+            }
            
 
-                //Start monitoring
-                watcher.EnableRaisingEvents = true;*/
 
-              _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-             await Task.Delay(5000, stoppingToken);
            
         }
 
-        public void onChange(object source, FileSystemEventArgs e) {
-            _logger.LogInformation(e.Name+" er  "+e.ChangeType);
-        }
-
-
-        public async void onRenamed(object source, RenamedEventArgs e)
-        {
-            _logger.LogInformation(e.OldName + " er endret til  " + e.Name + " Foldersize test " );
-
-
-         
-          
-
-
-        }
+      
 
         //function to calculate the size of the given path
         private float CalculateFolderSize(string folder)
@@ -168,7 +142,7 @@ namespace FolderWatcher
             if (response.IsSuccessStatusCode)
             {
 
-                Console.WriteLine("denne mappen er oppdatert:" + space.Name);
+                Console.WriteLine("Denne mappen er oppdatert:" + space.Name);
             }
             else { Console.WriteLine("Det er noe galt: " + response.ReasonPhrase); }
 
@@ -182,8 +156,8 @@ namespace FolderWatcher
             {
                 string FolderLocationIncludingEscapeSigne = @"";
                 FolderLocationIncludingEscapeSigne += folderLocation;
-                Console.WriteLine("Dette er en adresse" + folderLocation + " Og den mappen er så stor:" + CalculateFolderSize(FolderLocationIncludingEscapeSigne)+ "Index verdi: "+ index+" Tms id from setting: "+ TmsIdfromSettings);
-                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = "E", Type = "Test", FreespacePercentMinimum = 1, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 30000000 };
+           
+                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 1, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 30000000 };
                  await UpdateDiskSpace(space);
                 index++;
             }
