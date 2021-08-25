@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupportMonitorBlazor.Api", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FolderWatcher", "FolderWatcher\FolderWatcher.csproj", "{531B47DF-D29E-49D7-8AE0-A8C1807E15B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceWatcher", "ServiceWatcher\ServiceWatcher.csproj", "{20567147-0A3E-495C-9CB6-D6EEFBDE8973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceWatcher", "ServiceWatcher\ServiceWatcher.csproj", "{20567147-0A3E-495C-9CB6-D6EEFBDE8973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
