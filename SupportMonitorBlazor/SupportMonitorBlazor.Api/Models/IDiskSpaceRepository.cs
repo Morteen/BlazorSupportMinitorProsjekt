@@ -13,6 +13,7 @@ namespace SupportMonitorBlazor.Api.Models
         Task<DiskSpace> GetOneTmsDiskSpace(int id);
         Task<DiskSpace> AddTmsDiskSpace(DiskSpace DiskSpace);
         Task<DiskSpace> UpdateTmsDiskSpace(DiskSpace space);
+        Task<DiskSpace>  AddOrUpdateDiskSpace(DiskSpace space);
         void DeleteTmsDiskSpace(int TmsId);
 
     }

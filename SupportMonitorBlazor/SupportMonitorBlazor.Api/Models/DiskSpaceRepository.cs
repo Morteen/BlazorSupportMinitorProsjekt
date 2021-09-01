@@ -75,5 +75,68 @@ namespace SupportMonitorBlazor.Api.Models
           
             return null;
         }
-    }
+        ///////////////////
+        ///
+        public async Task<DiskSpace> AddOrUpdateDiskSpace(DiskSpace diskSpace)
+        {
+            var result = await dBContext.DiskSpace.FirstOrDefaultAsync(d => d.TmsId == diskSpace.TmsId && d.Name == diskSpace.Name);
+
+            if (result != null)
+            {
+                //result.Name = service.Name;
+                result.Name = diskSpace.Name;
+                result.Name = diskSpace.Name;
+                result.TmsId = diskSpace.TmsId;
+                result.Type = diskSpace.Type;
+                result.Actualsize = diskSpace.Actualsize;
+                result.FreespacePercentMinimum = diskSpace.FreespacePercentMinimum;
+                result.FrespaceMinimumBytes = diskSpace.FrespaceMinimumBytes;
+                result.MaxSize = diskSpace.MaxSize;
+
+
+
+
+
+
+
+                //Leggger til en kritisk feil på TMS'et
+                if (diskSpace.Actualsize > result.MaxSize)
+                {
+                    var Tms = await dBContext.BlazorTMS.FindAsync(diskSpace.TmsId);
+                    if (Tms != null)
+                    {
+                        if (Tms.CriticalErrors == 0)
+                            Tms.CriticalErrors = 1;
+                        await dBContext.SaveChangesAsync();
+                    }
+
+
+                }
+
+                dBContext.Entry(result).State = EntityState.Modified;
+                await dBContext.SaveChangesAsync();
+
+                return result;
+            }
+            else
+            {
+                var resulte = await dBContext.DiskSpace.AddAsync(diskSpace);
+                await dBContext.SaveChangesAsync();
+                return resulte.Entity;
+
+            }
+        }
+
+
+
+
+
+
+            /////////////////////
+
+
+
+
+
+        }
 }

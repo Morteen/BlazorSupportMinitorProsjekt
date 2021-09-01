@@ -157,7 +157,7 @@ namespace FolderWatcher
                 string FolderLocationIncludingEscapeSigne = @"";
                 FolderLocationIncludingEscapeSigne += folderLocation;
            
-                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 1, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 30000000 };
+                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 1, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 6666 };
                  await UpdateDiskSpace(space);
                 index++;
             }
