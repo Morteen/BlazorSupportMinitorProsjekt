@@ -58,7 +58,7 @@ namespace SupportMonitorBlazor.Api.Controllers
 
 
 
-        [HttpPost]
+        /*[HttpPost]
         public async Task<ActionResult<DiskSpace>> CreateDisksapce(DiskSpace space)
         {
             try
@@ -80,7 +80,7 @@ namespace SupportMonitorBlazor.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, e.Message + "Error retrieving data from the database");
             }
 
-        }
+        }*/
 
 
 
@@ -119,6 +119,33 @@ namespace SupportMonitorBlazor.Api.Controllers
 
 
 
+        [HttpPost]
+        public async Task<ActionResult<DiskSpace>> CreateOrUpdateTMSService(DiskSpace ds)
+        {
+            try
+            {
+                if (ds == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
+
+                var createdOrUpdatedDiskspace_service = await diskSpaceRepository.AddOrUpdateDiskSpace(ds);
+
+                //CreatedAtAction tar 3 parameter: navn på metoden som man får ved NameOf + id + det nye objektet
+                // return Ok(CreatedAtAction(nameof(createdOrUpdatedTms_service.Name), new { id = createdOrUpdatedTms_service.Id }, createdOrUpdatedTms_service));
+                return Ok(ds.Id + " Var vellyket" + ds.Name);
+
+
+
+
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, e.Message + " Error retrieving data from the database");
+            }
+
+        }
 
 
 
@@ -127,5 +154,8 @@ namespace SupportMonitorBlazor.Api.Controllers
 
 
 
-}
+
+
+
+    }
 }
