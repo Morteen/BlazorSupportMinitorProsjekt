@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PFQ2KmKJQ8Srs7iuzNgjj44gXGaykd+NIA/aasfBpPlMbfPYCHAgHokganQD+zZ04ZzWU1/FjAM+Lunt4BRkdw==",
+  "dgSpecHash": "DeTG96JNFMAWVhY3ch/xiTHt/enelmLBoa4DTNpV2qXPhDguCES8PyjNoqby/B1tgSt47TYk1Hq9SibgguFTzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\FolderWatcher\\FolderWatcher.csproj",
   "expectedPackageFiles": [
@@ -38,8 +38,7 @@
     "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\system.text.encodings.web\\6.0.0-preview.6.21352.12\\system.text.encodings.web.6.0.0-preview.6.21352.12.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.text.json\\6.0.0-preview.6.21352.12\\system.text.json.6.0.0-preview.6.21352.12.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\system.text.json\\6.0.0-preview.6.21352.12\\system.text.json.6.0.0-preview.6.21352.12.nupkg.sha512"
   ],
   "logs": []
 }

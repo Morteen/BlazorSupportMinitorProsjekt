@@ -48,14 +48,20 @@ namespace FolderWatcher
             var FileAdressArrey = _config.GetSection("TmsInfo:FileAdressArrey").Get<string[]>();
             CheckingRate = _config.GetValue<int>("TmsInfo:CheckingRate");
             ApiUrl = _config.GetValue<string>("TmsInfo:ApiUrl");
-            
-          
+            var driveArray = _config.GetSection("TmsInfo:DriveArray").Get<string[]>();
 
 
 
-         
-            
+           
 
+
+
+            foreach (string folderLocation in FileAdressArrey)
+            {
+                string FolderLocationIncludingEscapeSigne = @"";
+                FolderLocationIncludingEscapeSigne += folderLocation;
+                Console.WriteLine("Dette er en adresse" + folderLocation + " Og den mappen er så stor:" + CalculateFolderSize(FolderLocationIncludingEscapeSigne));
+            }
 
 
 
@@ -63,15 +69,12 @@ namespace FolderWatcher
 
             while (!stoppingToken.IsCancellationRequested) {
 
-                foreach (string folderLocation in FileAdressArrey)
-                {
-                    string FolderLocationIncludingEscapeSigne = @"";
-                    FolderLocationIncludingEscapeSigne += folderLocation;
-                    Console.WriteLine("Dette er en adresse" + folderLocation + " Og den mappen er så stor:" + CalculateFolderSize(FolderLocationIncludingEscapeSigne));
-                }
+              
                 await CheckFolderSize(FileAdressArrey);
+                await CheckDrives(driveArray);
 
-            
+
+
                 await Task.Delay(CheckingRate, stoppingToken);
             }
            
@@ -138,7 +141,7 @@ namespace FolderWatcher
             HttpResponseMessage response;
 
 
-                response = await client.PutAsJsonAsync<DiskSpace>(Constants.WebApiUrl,space);
+                response = await client.PostAsJsonAsync<DiskSpace>(Constants.WebApiUrl,space);
             if (response.IsSuccessStatusCode)
             {
 
@@ -157,7 +160,7 @@ namespace FolderWatcher
                 string FolderLocationIncludingEscapeSigne = @"";
                 FolderLocationIncludingEscapeSigne += folderLocation;
            
-                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 1, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 6666 };
+                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 10, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 6666 };
                  await UpdateDiskSpace(space);
                 index++;
             }
@@ -165,9 +168,48 @@ namespace FolderWatcher
           
 
         }
+        private async Task CheckDrives(string[] driveArray)
+        {
+            Console.WriteLine("Kommer inn i CheckDrives " + driveArray[0].ToString());
+            foreach (string driveLocation in driveArray)
+            { var result = GetTotalFreeSpace(driveLocation);
+                if (result != null) {
+                    if (result.TotalSize == null)
+                    {
+                        Console.WriteLine("result.TotalSize er null ");
+                    }
+                    else {
+                       long i = result.TotalSize;
+                        long j = result.AvailableFreeSpace;
+                        int res = Convert.ToInt32(( i -j )/ (1024 * 1024 ));
+                        int test = Convert.ToInt32((i)/ (1024 * 1024 ));
+                        int test2= Convert.ToInt32((i*0.1)/(1024 * 1024 ));
+                        Console.WriteLine("result.TotalSize er IKKE null :{0}", i); 
+                   
+                    var drive = new DiskSpace { TmsId = 18, Name =result.Name, Type = result.DriveType.ToString(), FreespacePercentMinimum = 10, FrespaceMinimumBytes = test2, Actualsize =res, MaxSize = test };
+                    Console.WriteLine(" Sjekker om object blir opprettet TMsid:{0}, Navn: {1}, Type:{2} Actualsize{3}", drive.TmsId, drive.Name,drive.Type,drive.Actualsize);
+
+                    await UpdateDiskSpace(drive);
+                    }
+                }
+               
+            }
+           
+        }
 
 
-      
+
+        private DriveInfo GetTotalFreeSpace(string driveName)
+        {
+            foreach (DriveInfo drive in DriveInfo.GetDrives())
+            {
+                if (drive.IsReady && drive.Name == driveName)
+                {
+                    return drive; 
+                }
+            }
+            return null;
+        }
 
 
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UUeI+U4evPwsTnZ/ZUu14O4YQ3KqeyC3bHdZDpsn7MVTRUD6tWWCHz+M4JNST3EBQytrv9Uzqv5HpaINWabS6A==",
+  "dgSpecHash": "odswa1bX2XcMRxaKItimye964dfabmMcvo7nKFOWWspl+/CRPUqodNWAWM1AriJd5mfo2ycyJijWFnKHDJ2iPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\ServiceWatcher\\ServiceWatcher.csproj",
   "expectedPackageFiles": [
@@ -88,8 +88,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.valuetuple\\4.3.0\\system.valuetuple.4.3.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.valuetuple\\4.3.0\\system.valuetuple.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {
