@@ -49,7 +49,7 @@ namespace SupportMonitorBlazor.Api.Controllers
             }
 
         }
-        [HttpGet("{TMS_id}/{Name}")]
+       /* [HttpGet("{TMS_id}/{Name}")]
         public async Task<ActionResult<TMS_Services>> GetOneTmsService(int TMS_id,string Name)
         {
             try
@@ -63,6 +63,36 @@ namespace SupportMonitorBlazor.Api.Controllers
                 else
                 {
                     return Ok(result);
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                     "Error retrieving data from the database");
+            }
+
+
+        }*/
+        [HttpGet("{Id}/{TMS_id}")]
+        public async Task<ActionResult<TMS_Services>> GetOneTmsService(int Id,int TMS_id)
+        {
+            try
+            {
+                
+                var result = await tMS_ServicesRepository.GetOneService(Id,TMS_id);
+        
+              
+                if (result == null)
+                {
+                    return StatusCode(StatusCodes.Status404NotFound,
+                       "Vi kan ikke finne denne windows servicen");
+                }
+                else
+                {
+               
+                    return result;
                 }
 
 

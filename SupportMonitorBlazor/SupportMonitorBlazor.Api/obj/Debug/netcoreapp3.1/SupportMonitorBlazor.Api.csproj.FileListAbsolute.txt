@@ -137,3 +137,8 @@ C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorP
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\obj\Debug\netcoreapp3.1\SupportMonitorBlazor.Api.genruntimeconfig.cache
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\obj\Debug\netcoreapp3.1\SupportMonitorBlazor.Api.csproj.AssemblyReference.cache
 C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\obj\Debug\netcoreapp3.1\SupportMonitorBlazor.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\morten.olsen\source\repos\Blazor\SupportPrototype\BlazorSupportMinitorProsjekt\SupportMonitorBlazor\SupportMonitorBlazor.Api\obj\Debug\netcoreapp3.1\SupportMonitorBlazor.Api.MvcApplicationPartsAssemblyInfo.cs

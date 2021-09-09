@@ -27,6 +27,10 @@ namespace SupportMonitorBlazor.Api.Models
             return await dBContext.TMS_Services.FirstOrDefaultAsync(s => s.TMS_Id == TMS_Id && s.Name==Name);
         }
 
+        public async Task<TMS_Services> GetOneService(int Id, int Tms_Id)
+        {
+            return await dBContext.TMS_Services.FirstOrDefaultAsync(s => s.Id == Id && s.TMS_Id == Tms_Id);
+        }
 
 
         public async Task<IEnumerable<TMS_Services>> GetServiceListForTms(int TMS_ID)
@@ -34,6 +38,7 @@ namespace SupportMonitorBlazor.Api.Models
             return await dBContext.TMS_Services.Where(t=>t.TMS_Id==TMS_ID).ToListAsync();
         }
 
+      
 
 
 
@@ -113,5 +118,6 @@ namespace SupportMonitorBlazor.Api.Models
 
 
         }
+
     }
 }
