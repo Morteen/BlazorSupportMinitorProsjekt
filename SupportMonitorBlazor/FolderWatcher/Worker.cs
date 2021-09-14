@@ -20,6 +20,7 @@ namespace FolderWatcher
        private string ApiUrl;
         private int TmsIdfromSettings;
         private int CheckingRate;
+        private int folderMaxSize;
 
 
 
@@ -45,6 +46,7 @@ namespace FolderWatcher
             /*Henter informasjon fra appsettings.json filen*/
 
             TmsIdfromSettings = _config.GetValue<int>("TmsInfo:TmsId");
+            folderMaxSize = _config.GetValue<int>("TmsInfo:MaxSize");
             var FileAdressArrey = _config.GetSection("TmsInfo:FileAdressArrey").Get<string[]>();
             CheckingRate = _config.GetValue<int>("TmsInfo:CheckingRate");
             ApiUrl = _config.GetValue<string>("TmsInfo:ApiUrl");
@@ -160,7 +162,7 @@ namespace FolderWatcher
                 string FolderLocationIncludingEscapeSigne = @"";
                 FolderLocationIncludingEscapeSigne += folderLocation;
            
-                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Test", FreespacePercentMinimum = 10, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = 6666 };
+                var space = new DiskSpace { Id = index+1000, TmsId = TmsIdfromSettings, Name = folderLocation, Type = "Logfolder", FreespacePercentMinimum = 10, FrespaceMinimumBytes = 11, Actualsize =Convert.ToInt32( CalculateFolderSize(FolderLocationIncludingEscapeSigne)/100), MaxSize = folderMaxSize };
                  await UpdateDiskSpace(space);
                 index++;
             }
@@ -174,9 +176,9 @@ namespace FolderWatcher
             foreach (string driveLocation in driveArray)
             { var result = GetTotalFreeSpace(driveLocation);
                 if (result != null) {
-                    if (result.TotalSize == null)
+                    if (result.TotalSize < 1)
                     {
-                        Console.WriteLine("result.TotalSize er null ");
+                        Console.WriteLine("result.TotalSize er 0 ");
                     }
                     else {
                        long i = result.TotalSize;

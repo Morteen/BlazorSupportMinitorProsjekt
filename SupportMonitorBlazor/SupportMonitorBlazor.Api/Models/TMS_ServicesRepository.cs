@@ -64,43 +64,58 @@ namespace SupportMonitorBlazor.Api.Models
         public  async Task<TMS_Services> AddOrUpdateTms(TMS_Services service)
         {
             var result = await dBContext.TMS_Services.FirstOrDefaultAsync(f=>f.TMS_Id==service.TMS_Id && f.Name==service.Name);
-          
+         
             if (result!= null)
             {
-                //result.Name = service.Name;
-                result.DisplayName = service.DisplayName;
-                if (service.Status!=null && service.Status!= result.Status)
-                {
-                    result.Status = service.Status;
-                }
-              
-                if (service.Status != null || service.Status == "Stopped")
-                {
-                    result.RunningSince = DateTime.Now;
-                }
-                if(service.StartType != null || service.StartType != "Automatic")
-                {
-                    result.StartType = service.StartType;
-                }
-          
-             
+                            
 
-
-
-             
-
-                //Leggger til en kritisk feil på TMS'et
-                if (service.Status != "Running")
+                //Legger til en kritisk feil på TMS'et
+                if (service.Status == "Stopped" && result.Status== "Running")
                 {
                     var Tms = await dBContext.BlazorTMS.FindAsync(service.TMS_Id);
                     if (Tms!=null) {
-                        if (Tms.CriticalErrors == 0)
-                            Tms.CriticalErrors = 1;
+                       
+                        Tms.CriticalErrors = Tms.CriticalErrors+ 1;
+                        dBContext.Entry(Tms).State = EntityState.Modified;
                         await dBContext.SaveChangesAsync();
                     }
                     //Legger på et nytt tidsstempel hvis servicen er stoppet
                     result.RunningSince = DateTime.Now;
                 }
+
+                //Trekker fra en kritisk feil på TMS'et hvis servicen starter
+                if (service.Status == "Running" && result.Status == "Stopped"||result.Status=="StartPending")
+                {
+                    var Tms = await dBContext.BlazorTMS.FindAsync(service.TMS_Id);
+                    if (Tms != null)
+                    {
+                        if (Tms.CriticalErrors >= 1)
+                            Tms.CriticalErrors = Tms.CriticalErrors-1;
+                        dBContext.Entry(Tms).State = EntityState.Modified;
+                        await dBContext.SaveChangesAsync();
+                    }
+                    //Legger på et nytt tidsstempel hvis servicen har startet
+                    result.RunningSince = DateTime.Now;
+                }
+
+
+
+                //Oppdaterer servicen med nye verdier
+                result.DisplayName = service.DisplayName;
+                if (service.Status != null && service.Status != result.Status)
+                {
+                    result.Status = service.Status;
+                }
+
+                if (service.Status != null || service.Status == "Stopped")
+                {
+                    result.RunningSince = DateTime.Now;
+                }
+                if (service.StartType != null || service.StartType != "Automatic")
+                {
+                    result.StartType = service.StartType;
+                }
+
                 dBContext.Entry(result).State = EntityState.Modified;
                  await dBContext.SaveChangesAsync();
 
