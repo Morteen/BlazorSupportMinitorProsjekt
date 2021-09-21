@@ -87,22 +87,20 @@ namespace SupportMonitorBlazor.Api.Controllers
         }
 
 
-
-
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult<BlazorTMS>> UpdateEmployee(int id, BlazorTMS tms)
+       [HttpPut]
+        public async Task<ActionResult<BlazorTMS>> UpdateTms( BlazorTMS tms)
         {
             try
             {
-                if (id != tms.TmsId)
+               /* if (id != tms.TmsId)
                 {
-                    return BadRequest("Employee id mismatch");
-                }
+                    return BadRequest("TmsId mismatch");
+                }*/
 
-                var BlazorTmsToUpdate = await blazorTmsRepository.GetTms(id);
+                var BlazorTmsToUpdate = await blazorTmsRepository.GetTms(tms.TmsId);
                 if (BlazorTmsToUpdate == null)
                 {
-                    return NotFound($"Kunde with ID ={id} not faund in the database");
+                    return NotFound($"Tms with ID ={tms.TmsId} not faund in the database");
                 }
                 return await blazorTmsRepository.UpdateTms(tms);
             }
@@ -112,6 +110,32 @@ namespace SupportMonitorBlazor.Api.Controllers
             }
 
         }
+
+        /*
+
+       [HttpPut("{id:int/tms}")]
+       public async Task<ActionResult<BlazorTMS>> UpdateTMS(int id,BlazorTMS tms)
+       {
+           try
+           {
+               if (id != tms.TmsId)
+               {
+                   return BadRequest("Tms id mismatch");
+               }
+
+               var BlazorTmsToUpdate = await blazorTmsRepository.GetTms(id);
+               if (BlazorTmsToUpdate == null)
+               {
+                   return NotFound($"Tms with ID ={id} not faund in the database");
+               }
+               return await blazorTmsRepository.UpdateTms(tms);
+           }
+           catch (Exception e)
+           {
+               return StatusCode(StatusCodes.Status500InternalServerError, e.Message + "Error Updating data from in the database");
+           }
+
+       }*/
 
     }
 }
