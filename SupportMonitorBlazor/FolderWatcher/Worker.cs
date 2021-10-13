@@ -17,7 +17,7 @@ namespace FolderWatcher
     {
         private readonly ILogger<Worker> _logger;
         private readonly IConfiguration _config;
-       private string ApiUrl;
+        private string ApiUrl;
         private int TmsIdfromSettings;
         private int CheckingRate;
         private int folderMaxSize;

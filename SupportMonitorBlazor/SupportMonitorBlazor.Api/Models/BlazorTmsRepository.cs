@@ -69,5 +69,17 @@ namespace SupportMonitorBlazor.Api.Models
             }
             return null;
         }
+
+        public async Task<IEnumerable<BlazorTMS>> Search(string name)
+        {
+            IQueryable<BlazorTMS> query = dBContext.BlazorTMS;
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(e => e.Name.Contains(name)
+                    ||e.Country.Contains(name)||e.TmsCategory.Contains(name));
+            }
+            return await query.ToListAsync();
+           
+        }
     }
 }

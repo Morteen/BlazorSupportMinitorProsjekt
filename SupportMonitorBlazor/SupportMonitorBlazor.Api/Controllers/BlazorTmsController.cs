@@ -60,6 +60,32 @@ namespace SupportMonitorBlazor.Api.Controllers
 
 
         }
+        [HttpGet("search")]
+        public async Task<ActionResult> Search(string name)
+        {
+            try
+            {
+                var result = await blazorTmsRepository.Search(name);
+                if (result.Any())
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound();
+                }
+               
+
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                     "Error retrieving data from the database");
+            }
+
+
+        }
 
 
         [HttpPost]
