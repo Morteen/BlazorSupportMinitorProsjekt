@@ -36,6 +36,7 @@ namespace SupportMonitorBlazor.Api
             services.AddScoped<IDiskSpaceRepository, DiskSpaceRepository>();
             services.AddScoped<ITmsPropertiesRepository, TmsPropertiesRepository>();
             services.AddScoped<ITMS_ServicesRepository, TMS_ServicesRepository>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocusSupportMonitor.Api", Version = "v1" });

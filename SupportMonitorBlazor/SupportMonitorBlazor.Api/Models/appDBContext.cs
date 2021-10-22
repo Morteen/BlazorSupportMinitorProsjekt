@@ -19,6 +19,8 @@ namespace SupportMonitorBlazor.Api.Models
         public DbSet<DiskSpace> DiskSpace { get; set; }
         public DbSet<TmsProperties> TmsProperties { get; set; }
         public DbSet<TMS_Services> TMS_Services { get; set; }
+        public DbSet<TmsUser>TmsUsers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -241,7 +243,15 @@ namespace SupportMonitorBlazor.Api.Models
 
 
 
-            }); ;
+            }); 
+
+           /* modelBuilder.Entity<TmsUser>().HasData(new TmsUser {
+                
+               
+                Username="test",
+                Password="test",
+                Role="test"
+            });*/
 
 
 
