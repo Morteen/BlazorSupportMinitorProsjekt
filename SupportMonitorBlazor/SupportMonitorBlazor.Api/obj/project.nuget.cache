@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gGfQCkBuvKSJeE5Gce7YlqqGOU4z5r4VnJkY91StCZgL6uXZRPnZXSzMLZsAU+Rjxy5jUx1edUxdXvDYloaE+g==",
+  "dgSpecHash": "osc9WymlLtmQVOn1LehVCDMBWTVYmSc2MWTexn31htD5hqmvKjmrwNq6I9kh3rp2xLXR4BiYmrIY8u2zbCpkBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\morten.olsen\\source\\repos\\Blazor\\SupportPrototype\\BlazorSupportMinitorProsjekt\\SupportMonitorBlazor\\SupportMonitorBlazor.Api\\SupportMonitorBlazor.Api.csproj",
   "expectedPackageFiles": [
@@ -43,10 +43,10 @@
     "C:\\Users\\morten.olsen\\.nuget\\packages\\netstandard.library\\2.0.0-preview1-25301-01\\netstandard.library.2.0.0-preview1-25301-01.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.1\\swashbuckle.aspnetcore.6.2.1.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.1\\swashbuckle.aspnetcore.swagger.6.2.1.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.1\\swashbuckle.aspnetcore.swaggergen.6.2.1.nupkg.sha512",
-    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.1\\swashbuckle.aspnetcore.swaggerui.6.2.1.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\morten.olsen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\morten.olsen\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",

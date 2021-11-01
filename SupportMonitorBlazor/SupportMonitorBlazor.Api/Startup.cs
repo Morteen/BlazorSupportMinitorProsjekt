@@ -37,20 +37,24 @@ namespace SupportMonitorBlazor.Api
             services.AddScoped<ITmsPropertiesRepository, TmsPropertiesRepository>();
             services.AddScoped<ITMS_ServicesRepository, TMS_ServicesRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
-         /*   services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocusSupportMonitor.Api", Version = "v1" });
-            });*/
+              services.AddSwaggerGen(c =>
+              {
+                  c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocusSupportMonitor.Api", Version = "v1" });
+              });
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LocusSupportMonitor.Api v1"));
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-               // app.UseSwagger();
-               // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LocusSupportMonitor.Api v1"));
+             
+               
             }
 
             app.UseHttpsRedirection();
